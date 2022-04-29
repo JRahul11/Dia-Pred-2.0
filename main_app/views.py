@@ -28,7 +28,7 @@ def predict(request):
             data_list.append(float(request.POST.get('dpf')))
             data_list.append(int(request.POST.get('age')))
 
-            model = joblib.load('static/model/finalrfc.sav')
+            model = joblib.load('static/model/model.sav')
             result = model.predict([data_list])
             
             # model = tf.keras.models.load_model('static/model/dps-dl-model')
